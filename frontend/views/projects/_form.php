@@ -14,6 +14,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'project_name')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'owner_id')->textInput() ?>
+    
     <?= $form->field($model, 'type_id')->textInput() ?>
 
     <?= $form->field($model, 'field_id')->textInput() ?>

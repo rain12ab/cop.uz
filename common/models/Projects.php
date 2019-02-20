@@ -44,7 +44,7 @@ class Projects extends \yii\db\ActiveRecord
     {
         return [
             [['project_name', 'type_id', 'field_id', 'unit_id', 'natural_sum', 'produce_sum', 'annual_export_sum', 'annuaL_profit', 'budget', 'project_value_plan', 'project_value_praxis', 'oneself_capital', 'bank_credit', 'foreigner_invest', 'service_bank_id', 'jobs', 'period_start', 'pics'], 'required'],
-            [['type_id', 'field_id', 'unit_id', 'service_bank_id', 'jobs', 'period_start'], 'integer'],
+            [['type_id', 'field_id', 'unit_id', 'service_bank_id', 'jobs', 'period_start', 'owner_id'], 'integer'],
             [['natural_sum', 'produce_sum', 'annual_export_sum', 'annuaL_profit', 'budget', 'project_value_plan', 'project_value_praxis', 'oneself_capital', 'bank_credit', 'foreigner_invest'], 'number'],
             [['pics'], 'safe'],
             [['project_name'], 'string', 'max' => 1000],
@@ -59,6 +59,7 @@ class Projects extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'project_name' => Yii::t('app', 'Project Name'),
+            'owner_id' => Yii::t('app', 'Project id'),
             'type_id' => Yii::t('app', 'Type ID'),
             'field_id' => Yii::t('app', 'Field ID'),
             'unit_id' => Yii::t('app', 'Unit ID'),

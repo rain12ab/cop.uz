@@ -17,7 +17,7 @@ class ProjectsSearch extends Projects
     public function rules()
     {
         return [
-            [['id', 'type_id', 'field_id', 'unit_id', 'service_bank_id', 'jobs', 'period_start'], 'integer'],
+            [['id', 'type_id', 'field_id', 'unit_id', 'service_bank_id', 'jobs', 'period_start', 'owner_id'], 'integer'],
             [['project_name', 'pics'], 'safe'],
             [['natural_sum', 'produce_sum', 'annual_export_sum', 'annuaL_profit', 'budget', 'project_value_plan', 'project_value_praxis', 'oneself_capital', 'bank_credit', 'foreigner_invest'], 'number'],
         ];
